@@ -1,5 +1,60 @@
+body {
+    margin: 0;
+    padding:0;
+}
 #rss {
-    display: grid; 
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex; /*mindent egy sorba rak, flex: display property, flexnek a lényege, hogy minden láthtató legyen*/
+    flex-wrap:wrap ;/*bekapcsol egy levágás funkciót, olyan szélesre terjeszkedik el amennyire tud és utána vágja le*/
+    background-color: rgb(182, 180, 180);
+    flex: 2;
+}
+
+.article {
+    width: 33.33%;
+}
+
+@media  screen and (max-width: 768px) { /*média selector, dinamukisan alkalmazkodik a méretváltozáshoz*/
+    .article {
+        width: 50%;
+
+    }
+}
+@media  screen and (max-width: 450px) { /*média selector, dinamukisan alkalmazkodik a méretváltozáshoz*/
+    .article {
+        width: 100%;
+    
+        }
+    
+    }
+
+#root {
+    display: flex;
+    flex-direction: column;
+}
+
+nav ul{
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    justify-content: flex-end;/*jobbra rendezte*/
+    background-color: rgb(87, 85, 85);
+    color: white;
+ 
+}
+nav ul a {
+    display: block;
+    padding: 1rem;/*egymsához képest állítottuk a menüpontokat*/
+    background-color: grey;
+    text-decoration: none;
+    color: white;
+}
+
+#main {
+    display: flex;
+}
+
+aside {
+    flex: 1;
 
 }

@@ -5,10 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RSS Reader</title>
-    <script src="index.js"></script> //index.js-re hivatkozunk
+    <script src="index.js"></script> <!--index.js-re hivatkozunk-->
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <section id="rss"></section>
+    <div id="root">
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li><!--az "a" az egy html tag és a kacsacsőrtől lesz az-->
+                <li><a href="#footer">About</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav><!--navigációs sáv-->
+        
+        <div id ="main">
+            <aside>I am the sidebar</aside>
+            <section id="rss"></section>
+        </div>
+        
+        <footer>
+            <a name="footer"></a><!--a tag egyenlő anchor-->
+            About us...</footer>
+    </div>
 </body>
 </html>
